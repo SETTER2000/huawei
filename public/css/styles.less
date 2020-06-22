@@ -48,7 +48,7 @@ ul {
   padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
 }
 
-button:hover, a.btn:hover {
+button:hover, a.btn:hover,#button:hover {
   cursor: pointer;
   background-color: @red - 20%;
   color: @white - 20%;
@@ -486,13 +486,10 @@ main {
   }
 
   article:nth-of-type(2) {
-    //background-color: #e82e37;
     // Вызываем генератор картинок
     .placeholder(310px, "ser.png", 50, '', contain, 0);
-
     .photo-box {
       position: relative;
-
       .photo-50 {
         position: absolute;
         top: -50px;
@@ -502,6 +499,7 @@ main {
 }
 
 #button {
+  .shadow;
   display: none;
   background-color: @red;
   width: 50px;
@@ -518,15 +516,6 @@ main {
 
 #button.show {
   display: inline-block;
-}
-
-#button:hover {
-  cursor: pointer;
-  background-color: #333;
-}
-
-#button:active {
-  background-color: #555;
 }
 
 #button::after {
