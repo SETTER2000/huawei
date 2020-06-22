@@ -2,16 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Landata & Huawei</title>
+    <title>Landata & Eaton</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
           integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous"/>
     <link rel="stylesheet/less" type="text/less" href="css/styles.less"/>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <!--    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.11.1/less.min.js"></script>
 </head>
 <body>
+<a id="button"></a>
 <header>
     <section>
 
@@ -27,9 +28,9 @@
         </article>
         <article>
             <menu>
-                <a class="btn" href="#">История партнерства</a>
-                <a class="btn" href="#">Промопрограмма</a>
-                <a class="btn" href="#">Наши компетенции</a>
+                <button class="btn" onclick="showScroll('#partner')" >История партнерства</button>
+                <button class="btn" onclick="showScroll('#promo')" >Промопрограмма</button>
+                <button class="btn" onclick="showScroll('#compet')" >Наши компетенции</button>
             </menu>
         </article>
     </section>
@@ -37,7 +38,7 @@
 </header>
 <main>
     <section>
-        <article>
+        <article id="partner">
             <h4>22 года успешного <br>партнерства Landata и Eaton</h4>
             <ul class="partner">
                 <li>
@@ -82,25 +83,37 @@
                         бесперебойного
                         питания </h6>
                     В состав департамента входят продавцы ИБП, технические пресейлы, продакт-менеджеры, сервисный отдел.
-                    Такой состав позволяет оказывать партнерам максимальную помощь в проектах: это подбор ИБП в
+                    Такой состав позволяет оказывать партнерам максимальную помощь в проектах: это подбор ИБП <br>в
                     соответствии с требованиями заказчика, сравнение и ориентирование по конкурентам, поставка,
                     установка и постгарантийное сопровождение ИБП.
                 </div>
             </div>
-            <div style="display: flex; ">
-                <div style="display: flex; flex-direction: column">
+            <div style="display: flex;">
+                <div style="display: flex; flex-direction: column;">
                     <img style="margin: 30px auto 20px;" src="img/ico1.png" alt="">
-                    <h6>Совместно разработанная партнерская программа «Выгодные бонусы»</h6> Продажи ходовой линейки
-                    трехфазных ИБП Eaton 93Е 15-200 кВА показывают рост более 20%. Увеличивается спрос, у партнеров
-                    появляется возможность получать актуальную информацию о складских остатках при необходимости
-                    отгрузить оборудование в кратчайшие сроки.
+                    <div style="width: 530px; margin-right: 40px;">
+                    <span style="font-size: 26px; font-weight: bolder; color: #005fce">Совместно разработанная
+                        партнерская
+                        программа «Выгодные
+                        бонусы»</span>
+                        <p>Продажи ходовой линейки
+                            трехфазных ИБП Eaton 93Е 15-200 кВА показывают рост более 20%. Увеличивается спрос, у
+                            партнеров
+                            появляется возможность получать актуальную информацию о складских остатках при необходимости
+                            отгрузить оборудование в кратчайшие сроки. </p>
+                    </div>
                 </div>
                 <div style="display: flex; flex-direction: column">
                     <img style="margin: 30px auto 20px;" src="img/ico2.png" alt="">
-                    <h6>Развитие направления Eaton</h6> В настоящее время Landata планирует дальнейшее развитие
-                    направления
-                    Eaton, наращивание объема продаж, расширение дилерской сети и поддержание склада с самым широким
-                    ассортиментом ИБП в Москве.
+                    <div style="width: 530px; padding-left: 80px;">
+                    <span style="font-size: 26px;  font-weight: bolder; color: #005fce">Развитие
+                        направления
+                        Eaton</span>
+                        <p> В настоящее время Landata планирует дальнейшее развитие направления
+                            Eaton, наращивание объема продаж,<br> расширение дилерской сети и поддержание склада с самым
+                            широким
+                            ассортиментом ИБП в Москве. </p>
+                    </div>
                 </div>
             </div>
 
@@ -112,14 +125,14 @@
       </section>-->
 
 </main>
-<div class="bg servers">
+<div class="bg servers" id="compet">
     <h4>Уникальные отличия компании Landata <br>от других поставщиков</h4>
     <section>
         <article>
             <div class="photo-box">
                 <div class="photo-1"></div>
             </div>
-            <div class="text"><strong>Максимальная поддержка партнеров. </strong>
+            <div class="text"><strong>Максимальная поддержка партнеров </strong>
                 <p>Как при поставке со склада, так и в проектах.</p>
             </div>
         </article>
@@ -127,7 +140,7 @@
             <div class="photo-box">
                 <div class="photo-2"></div>
             </div>
-            <div class="text"><strong>Имеем самый большой склад ИБП Eaton в РФ. </strong>
+            <div class="text"><strong>Имеем самый большой склад ИБП Eaton <br>в РФ </strong>
                 <p>Держим на складе весь спектр оборудования. Поставляем со склада как самые простые ИБП 3-5 серии, так
                     и онлайновые ИБП, трехфазные ИБП Eaton до 200 кВА включительно.</p>
             </div>
@@ -137,7 +150,7 @@
                 <div class="photo-3"></div>
             </div>
             <div class="text"><strong>Обеспечиваем хорошие цены, за счет большого объема поставок и поддержки
-                вендора. </strong>
+                вендора </strong>
                 <p>В том числе возможна комплектация ИБП недорогими, но хорошими аккумуляторами в шкафах российского
                     производства.</p>
             </div>
@@ -146,7 +159,7 @@
             <div class="photo-box">
                 <div class="photo-4"></div>
             </div>
-            <div class="text"><strong>Помощь в проектировании ИБП. </strong>
+            <div class="text"><strong>Помощь в проектировании ИБП </strong>
                 <p>На большие проекты поможем подготовить эксплуатационную документацию.</p>
             </div>
         </article>
@@ -154,7 +167,7 @@
             <div class="photo-box">
                 <div class="photo-5"></div>
             </div>
-            <div class="text"><strong>Своя сервисная группа.</strong>
+            <div class="text"><strong>Своя сервисная группа</strong>
                 <p>Инженеры высшей квалификации и многолетний опыт сотрудничества дает возможность реализовывать
                     сложные проекты. В том числе проекты с расширением гарантии.</p>
             </div>
@@ -163,7 +176,7 @@
             <div class="photo-box">
                 <div class="photo-6"></div>
             </div>
-            <div class="text"><strong>Электромонтажные услуги в проекте.</strong>
+            <div class="text"><strong>Электромонтажные услуги в проекте</strong>
                 <p>Возможность включения в проекты электромонтажных услуг, щитового оборудования, сложный занос ИБП до
                     места эксплуатации.</p>
             </div>
@@ -171,8 +184,7 @@
 
     </section>
 </div>
-<div class="bg water">
-
+<div class="bg water" id="promo">
     <section>
         <article>
             <h4>Промопрограмма</h4>
@@ -190,7 +202,7 @@
         </article>
         <article>
             <h3>Условия программы:</h3>
-            <h5>Закупая в период действия программы трехфазные ИБП, вы получаете бонус:</h5>
+            <h5>Закупая в период действия программы трехфазные ИБП,<br> вы получаете бонус:</h5>
             <section>
                 <article class="sh">
                     <div class="photo-box">
@@ -243,16 +255,21 @@
 </div>
 <div class="bg footer">
     <section>
-        <article> <blockquote><p> <span class="bold">Полный список оборудования </span><br> участвующего в программе вы можете
-            посмотреть <a class="decor" href="#"><span class="stroke">здесь</span></a></p>
-            <p><strong>Внимание! Регистрация в программе обязательна.</strong> <br>Регистрация партнеров 2018-2019 года
-                актуальна.             </p>  </blockquote>
-            <a class="btn" type="submit" href="http://www.landata.ru">регистрация</a>
+        <article>
+            <blockquote><p><span class="bold">Полный список оборудования </span><br> участвующего в программе вы можете
+                посмотреть <a class="decor" href="http://www.landata.ru/upload/Eaton%20promo.pdf.pdf"><span
+                        class="stroke">здесь</span></a></p>
+                <p><strong>Внимание! Регистрация в программе обязательна.</strong> <br>Регистрация партнеров 2018-2019
+                    года
+                    актуальна. </p></blockquote>
+            <a class="btn" type="submit"
+               href="http://www.landata.ru/forpartners/form/workshop_registration/registration-card-of-the-participant-of-promo-programs-eaton-93e-ups-15-400-kva-in-landata-best-bonu.php?clear_cache=Y">регистрация</a>
         </article>
         <article>
             <div class="photo-box">
                 <div class="photo-50"></div>
-            </div></article>
+            </div>
+        </article>
     </section>
 </div>
 <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -265,18 +282,44 @@
 <script>
     // Your web app's Firebase configuration
     var firebaseConfig = {
-        apiKey: "AIzaSyAFr_tGsq2VjeEMaKkUWw0fCinhr5YhK-8",
-        authDomain: "landata-huawei-dbf62.firebaseapp.com",
-        databaseURL: "https://landata-huawei-dbf62.firebaseio.com",
-        projectId: "landata-huawei-dbf62",
-        storageBucket: "landata-huawei-dbf62.appspot.com",
-        messagingSenderId: "1023412701127",
-        appId: "1:1023412701127:web:3af4349212e9abf7ca7be2",
-        measurementId: "G-LJC96T4KZ4"
+        apiKey: "AIzaSyC8f2r3oFXSEh4ol3WaOtzD0e4iLD2pxzc",
+        authDomain: "landata-eaton.firebaseapp.com",
+        databaseURL: "https://landata-eaton.firebaseio.com",
+        projectId: "landata-eaton",
+        storageBucket: "landata-eaton.appspot.com",
+        messagingSenderId: "73578121242",
+        appId: "1:73578121242:web:97b97b5bf20310bce829a3",
+        measurementId: "G-FXCXY36PQ9"
     };
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
 </script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+    function showScroll(id) {
+        let offset = 0;
+        $('html, body').animate({
+            scrollTop:$(id).offset().top - offset
+        }, 1000);
+        return false;
+    }
+    $(document).ready(function() {
+        var btn = $('#button');
+        $(window).scroll(function() {
+            if ($(window).scrollTop() > 300) {
+                btn.addClass('show');
+            } else {
+                btn.removeClass('show');
+            }
+        });
+        btn.on('click', function(e) {
+            e.preventDefault();
+            $('html, body').animate({scrollTop:0}, '300');
+        });
+        
+    });
+</script>
 </body>
-</html>
+</html>      

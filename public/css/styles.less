@@ -10,18 +10,21 @@
 @size30: 30px;
 @photo-mask: #000000;
 @bgsz: cover;
-@rub:"\20BD";
+@rub: "\20BD";
 html {
   font-size: 18px;
 }
+
 body {
   margin: 0;
   box-sizing: border-box;
   font-family: @regular;
 }
+
 .shadow() {
   box-shadow: 0 0 12px rgba(255, 255, 255, .5); /* Параметры тени */
 }
+
 button, a.btn {
   background: @red;
   border: none;
@@ -39,10 +42,12 @@ button, a.btn {
 li {
   list-style-type: none;
 }
+
 ul {
   margin-left: 0; /* Отступ слева в браузере IE и Opera */
   padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
 }
+
 button:hover, a.btn:hover {
   cursor: pointer;
   background-color: @red - 20%;
@@ -69,12 +74,13 @@ header {
   -webkit-background-size: cover;
   background-size: cover;
   justify-content: space-around;
+
   section {
     flex: 0 1250px;
 
     article {
       padding: 10px;
-   //   margin-bottom: 20px;
+      //   margin-bottom: 20px;
       .logo {
 
         display: flex;
@@ -87,6 +93,7 @@ header {
           -webkit-background-size: contain;
           background-size: contain;
         }
+
         .eaton {
           width: 210px;
           height: 45px;
@@ -95,29 +102,33 @@ header {
           background-size: contain;
         }
       }
+
       menu {
         display: flex;
         align-items: center;
         justify-content: space-around;
       }
     }
-    article:nth-of-type(1) {
-   margin-bottom: 60px;
-    }
 
-    article:nth-of-type(2) {
+    article:nth-of-type(1) {
       margin-bottom: 100px;
     }
 
+    article:nth-of-type(2) {
+      margin-bottom: 80px;
+    }
+
     article:nth-of-type(3) {
-      margin-bottom: 60px;
+      margin-bottom: 40px;
     }
   }
 }
+
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 2rem;
 }
+
 h1 {
   font-family: @extrabold;
   font-size: 100px;
@@ -126,21 +137,26 @@ h1 {
   line-height: 110px;
   margin: 0;
 }
+
 h2 {
   font-size: 72px;
 }
+
 h3 {
   font-size: 60px;
 }
+
 h4 {
   font-size: 42px;
   color: @base-color;
   font-family: @bold;
 }
+
 h5 {
   font-size: 32px;
   font-family: @bold;
 }
+
 .font-size(@size) {
   font-size: @size;
 }
@@ -162,9 +178,11 @@ h6 {
     justify-content: space-between;
     flex: 1 100px;
     padding: 0 10px 10px 0;
+
     div {
       min-width: 145px;
     }
+
     div:nth-of-type(2) {
       flex: 2 100px;
       padding: 8px 0;
@@ -178,14 +196,18 @@ main {
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
+
   section {
     display: flex;
     max-width: 1250px;
+
     article {
       padding: 10px;
       margin-top: 30px;
       flex: 1 300px;
+
       .quote {
+        margin-top: -50px;
         padding: 20px 100px 20px 50px;
         max-width: 900px;
         height: 200px;
@@ -271,12 +293,12 @@ main {
 .bg {
   display: flex;
   flex-direction: column;
-  margin-top: 60px;
   padding: 40px;
   -webkit-background-size: cover;
   background-size: cover;
   align-items: center;
   flex-wrap: wrap;
+
   section {
     display: flex;
     flex-wrap: wrap;
@@ -286,6 +308,7 @@ main {
 
 .bg.servers {
   background: url(../img/br.jpg) @base-color no-repeat center center;
+
   h4 {
     text-align: center;
     color: @white;
@@ -297,32 +320,39 @@ main {
     background-color: @white;
     // .placeholder(200px, '18765.jpg', 1) ;
     // Вызываем генератор картинок
-    @photo-name: "18765.jpg", "korob.jpg", "mash.jpg", "plc.jpg", "kaska.JPG", "maska.jpg";
+    @photo-name: "18765.jpg", "korob.jpg", "mash.jpg", "kaska.JPG", "plc.jpg", "maska.jpg";
     .generate-pic(@photo-name, 6, @photo-mask, @bgsz, 0);
+
     strong {
       color: @base-color;
     }
+
     .text {
       padding: 20px;
     }
   }
 }
+
 .bg.water {
-  margin-top: 3rem;
-  background: url(../img/water.jpg) @base-color no-repeat center center;
+  background: url(../img/water.jpg) @base-color no-repeat top center;
   padding: 0;
+  align-items: center;
+
   article {
     flex: 1 200px;
-    margin: 10px;
-    .placeholder(375px, "computers.png", 40, '', @bgsz, 0);
+    // margin: 10px;
+    .placeholder(375px, "computers.png", 40, '', @bgsz, 40px 0 25px 40px);
+
     .text-big {
-      padding-right: 4rem;
+      padding-right: 1rem;
       .font-size(@size30 - 8);
     }
+
     h4 {
       text-align: left;
       font-family: @extrabold;
     }
+
     h3 {
       .font-size(@size30 + 8);
       color: @base-color;
@@ -331,111 +361,180 @@ main {
       padding: 0;
       margin: 0 0 1rem;
     }
+
     h5 {
       text-align: center;
-      .font-size(@size30+2);
+      .font-size(@size30);
       padding: 0 9rem;
+      margin-top: -16px;
     }
+
     h6 {
       color: black;
-      .font-size(@size30);
+      .font-size(@size30 - 2);
       font-family: @extrabold;
       padding: 0;
       margin: 0;
     }
+
     strong {
       color: black;
     }
+
     article {
       flex: 1 260px;
       margin: 12px;
       padding: 12px;
       background-color: @white;
-      .current{
+
+      .current {
         font-size: @size30 + 8;
         font-family: @bold
       }
-      .current:after{
+
+      .current:after {
         padding-left: 5px;
-        content:@rub;
+        content: @rub;
       }
-      .text{
+
+      .text {
         align-items: center;
         display: flex;
         flex-direction: column;
-        div{
-         align-items: center;
+
+        div {
+          align-items: center;
           padding-bottom: 10px;
         }
       }
+
       // Вызываем генератор картинок
       @photo-name2: "5000.png", "10000.jpg", "1500.png", "2000.png" ;
       .generate-pic(@photo-name2, 4, '', contain, 20px);
+
       strong {
         color: @base-color;
       }
     }
-    article.sh{
+
+    article.sh {
       box-shadow: 0 0 19px rgba(5, 5, 5, 0.28);
     }
   }
+
+  article:first-child {
+    align-self: flex-end;
+
+  }
+
   article:nth-of-type(5) {
     flex: 2 260px;
     background: none;
     font-family: @bold-it;
   }
 }
+
 .bg.footer {
   margin-top: 3rem;
   background: url(../img/bg_footer.jpg) @base-color no-repeat center center;
   padding: 0;
-  article{
+
+  article {
     flex: 1 200px;
     padding: 0;
     color: @white;
     justify-content: flex-end;
     align-items: flex-end;
     margin-left: 4em;
+
     blockquote {
-      margin:0;
+      margin: 0;
       padding-left: 15px;
       position: relative;
       border-left: 6px solid @white;
     }
-    .bold{
+
+    .bold {
       font-weight: bolder;
       font-size: 1.3rem;
     }
-    .stroke{
+
+    .stroke {
       border-bottom: .1px @white dashed;
-      &:hover{
+
+      &:hover {
         border-bottom: .1px @red + 10 dashed;
       }
     }
-    a.decor{
+
+    a.decor {
       color: @white;
       text-decoration: none;
-      &:hover{
+
+      &:hover {
         color: @red + 10;
       }
     }
   }
-  article:first-child{
+
+  article:first-child {
     align-self: center;
-    a.btn{
+
+    a.btn {
       margin-left: 20px;
     }
   }
-  article:nth-of-type(2){
+
+  article:nth-of-type(2) {
     //background-color: #e82e37;
     // Вызываем генератор картинок
     .placeholder(310px, "ser.png", 50, '', contain, 0);
-    .photo-box{
+
+    .photo-box {
       position: relative;
-      .photo-50{
+
+      .photo-50 {
         position: absolute;
-        top:-50px;
+        top: -50px;
       }
     }
   }
 }
+
+#button {
+  display: none;
+  background-color: @red;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  margin: 30px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s;
+  z-index: 1000;
+}
+
+#button.show {
+  display: inline-block;
+}
+
+#button:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+
+#button:active {
+  background-color: #555;
+}
+
+#button::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+} 
