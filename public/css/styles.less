@@ -19,6 +19,7 @@ body {
   margin: 0;
   box-sizing: border-box;
   font-family: @regular;
+  background-color: white;
 }
 
 .shadow() {
@@ -54,16 +55,7 @@ button:hover, a.btn:hover,#button:hover {
   color: @white - 20%;
 }
 
-//blockquote:before {
-//  //content: "\201C";
-//  font-family: serif;
-//  position: absolute;
-//  left: -29px;
-//  top: 5px;
-// // color: #BCBCBC;
-//  font-size: 50px;
-// // text-shadow: 1px 2px 0 white;
-//}
+
 
 header {
   display: flex;
@@ -207,7 +199,7 @@ main {
       flex: 1 300px;
 
       .quote {
-        margin-top: -50px;
+        margin-top: -60px;
         padding: 20px 100px 20px 50px;
         max-width: 900px;
         height: 200px;
@@ -223,7 +215,7 @@ main {
       }
 
       .pic {
-        display: block;
+       // display: block;
         max-width: 100%;
         height: auto;
       }
@@ -234,7 +226,8 @@ main {
     }
 
     article:nth-of-type(1) {
-      margin-right: 30px;
+      flex: 0 603px  ;
+      margin-right: 0;
     }
   }
 }
@@ -337,41 +330,45 @@ main {
   background: url(../img/water.jpg) @base-color no-repeat top center;
   padding: 0;
   align-items: center;
-
+  margin-bottom: -20px;
   article {
     flex: 1 200px;
     // margin: 10px;
-    .placeholder(375px, "computers.png", 40, '', @bgsz, 40px 0 25px 40px);
+    .placeholder(375px, "computers.png", 40, '', contain, 0 0 15px 40px);
 
     .text-big {
       padding-right: 1rem;
-      .font-size(@size30 - 8);
+      .font-size(@size30 - 7.4);
+      font-family: @regular;
     }
 
     h4 {
       text-align: left;
       font-family: @extrabold;
+      margin-bottom: 30px;
+      font-size: 2.8rem;
+      padding: 0;
     }
 
     h3 {
-      .font-size(@size30 + 8);
+      .font-size(@size30 + 10.17);
       color: @base-color;
       text-align: center;
       font-family: @extrabold;
       padding: 0;
-      margin: 0 0 1rem;
+      margin: 30px 0 1rem;
     }
 
     h5 {
       text-align: center;
       .font-size(@size30);
       padding: 0 9rem;
-      margin-top: -16px;
+      margin: -16px 0 0;
     }
 
     h6 {
       color: black;
-      .font-size(@size30 - 2);
+      .font-size(@size30);
       font-family: @extrabold;
       padding: 0;
       margin: 0;
@@ -384,7 +381,7 @@ main {
     article {
       flex: 1 260px;
       margin: 12px;
-      padding: 12px;
+      padding: 10px;
       background-color: @white;
 
       .current {
@@ -418,15 +415,19 @@ main {
     }
 
     article.sh {
+      flex: 1 260px;
       box-shadow: 0 0 19px rgba(5, 5, 5, 0.28);
     }
   }
-
+  article:nth-of-type(1) {
+    flex: 0 675px;
+  }
   article:first-child {
     align-self: flex-end;
 
   }
 
+ 
   article:nth-of-type(5) {
     flex: 2 260px;
     background: none;
